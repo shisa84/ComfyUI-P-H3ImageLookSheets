@@ -111,7 +111,9 @@ the numbering never shifts.
 Regions: `Full Body`, `Upper Body` (head to hips), `Lower Body` (waist to
 feet), `Waist` (chest to upper thighs), `Head`. Orientations: `Front`,
 `Front 3/4 Left`, `Front 3/4 Right`, `Left Profile`, `Right Profile`,
-`Back 3/4 Left`, `Back 3/4 Right`, `Back`.
+`Back 3/4 Left`, `Back 3/4 Right`, `Back`. `Left`/`Right` are sides of the
+image: `Left Profile` has the nose pointing to the left edge of the image,
+`Front 3/4 Left` and `Back 3/4 Left` have the body angled toward it.
 
 `expression` is only written when the face is in frame: region `Full Body`,
 `Upper Body` or `Head`, orientation `Front`, `Front 3/4 Left` or

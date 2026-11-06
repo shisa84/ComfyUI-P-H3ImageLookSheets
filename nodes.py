@@ -823,45 +823,45 @@ class PH3LookSheetsImageAggregator(io.ComfyNode):
 #: Upper/Lower Legs like Lower Body, whatever the wording.
 _SHOT_DESCRIPTION_PHRASES = {
     "Full Body - Front": "a full-body shot, front view, facing the camera, from head to toe",
-    "Full Body - Front 3/4 Left": "a full-body shot, turned three-quarters to the left, from head to toe",
-    "Full Body - Front 3/4 Right": "a full-body shot, turned three-quarters to the right, from head to toe",
-    "Full Body - Left Profile": "a full-body shot, left profile, from head to toe",
-    "Full Body - Right Profile": "a full-body shot, right profile, from head to toe",
-    "Full Body - Back 3/4 Left": "a full-body shot, mostly turned away, seen three-quarters from the back on the left side, from head to toe",
-    "Full Body - Back 3/4 Right": "a full-body shot, mostly turned away, seen three-quarters from the back on the right side, from head to toe",
-    "Full Body - Back": "a full-body shot, back view, from head to toe",
+    "Full Body - Front 3/4 Left": "a full-body shot, three-quarter front view, body and face angled toward the left edge of the image, from head to toe",
+    "Full Body - Front 3/4 Right": "a full-body shot, three-quarter front view, body and face angled toward the right edge of the image, from head to toe",
+    "Full Body - Left Profile": "a full-body shot, side profile view, body and face pointing toward the left edge of the image, nose pointing left, from head to toe",
+    "Full Body - Right Profile": "a full-body shot, side profile view, body and face pointing toward the right edge of the image, nose pointing right, from head to toe",
+    "Full Body - Back 3/4 Left": "a full-body shot, three-quarter back view, seen mostly from behind, body angled toward the left edge of the image, from head to toe",
+    "Full Body - Back 3/4 Right": "a full-body shot, three-quarter back view, seen mostly from behind, body angled toward the right edge of the image, from head to toe",
+    "Full Body - Back": "a full-body shot, back view, seen from directly behind, from head to toe",
     "Upper Body - Front": "front view, facing the camera, framed from waist to top of head",
-    "Upper Body - Front 3/4 Left": "turned three-quarters to the left, framed from waist to top of head",
-    "Upper Body - Front 3/4 Right": "turned three-quarters to the right, framed from waist to top of head",
-    "Upper Body - Left Profile": "left profile, framed from waist to top of head",
-    "Upper Body - Right Profile": "right profile, framed from waist to top of head",
-    "Upper Body - Back 3/4 Left": "mostly turned away, seen three-quarters from the back on the left side, framed from waist to top of head",
-    "Upper Body - Back 3/4 Right": "mostly turned away, seen three-quarters from the back on the right side, framed from waist to top of head",
-    "Upper Body - Back": "back view, framed from waist to top of head",
+    "Upper Body - Front 3/4 Left": "three-quarter front view, body and face angled toward the left edge of the image, framed from waist to top of head",
+    "Upper Body - Front 3/4 Right": "three-quarter front view, body and face angled toward the right edge of the image, framed from waist to top of head",
+    "Upper Body - Left Profile": "side profile view, body and face pointing toward the left edge of the image, nose pointing left, framed from waist to top of head",
+    "Upper Body - Right Profile": "side profile view, body and face pointing toward the right edge of the image, nose pointing right, framed from waist to top of head",
+    "Upper Body - Back 3/4 Left": "three-quarter back view, seen mostly from behind, body angled toward the left edge of the image, framed from waist to top of head",
+    "Upper Body - Back 3/4 Right": "three-quarter back view, seen mostly from behind, body angled toward the right edge of the image, framed from waist to top of head",
+    "Upper Body - Back": "back view, seen from directly behind, framed from waist to top of head",
     "Lower Body - Front": "front view, facing the camera, a close-up crop, top of frame is the waist, bottom of frame is just below the feet",
-    "Lower Body - Front 3/4 Left": "turned three-quarters to the left, a close-up crop, top of frame is the waist, bottom of frame is just below the feet",
-    "Lower Body - Front 3/4 Right": "turned three-quarters to the right, a close-up crop, top of frame is the waist, bottom of frame is just below the feet",
-    "Lower Body - Left Profile": "left profile, a close-up crop, top of frame is the waist, bottom of frame is just below the feet",
-    "Lower Body - Right Profile": "right profile, a close-up crop, top of frame is the waist, bottom of frame is just below the feet",
-    "Lower Body - Back 3/4 Left": "mostly turned away, seen three-quarters from the back on the left side, a close-up crop, top of frame is the waist, bottom of frame is just below the feet",
-    "Lower Body - Back 3/4 Right": "mostly turned away, seen three-quarters from the back on the right side, a close-up crop, top of frame is the waist, bottom of frame is just below the feet",
-    "Lower Body - Back": "back view, a close-up crop, top of frame is the waist, bottom of frame is just below the feet",
+    "Lower Body - Front 3/4 Left": "three-quarter front view, body and face angled toward the left edge of the image, a close-up crop, top of frame is the waist, bottom of frame is just below the feet",
+    "Lower Body - Front 3/4 Right": "three-quarter front view, body and face angled toward the right edge of the image, a close-up crop, top of frame is the waist, bottom of frame is just below the feet",
+    "Lower Body - Left Profile": "side profile view, body and face pointing toward the left edge of the image, nose pointing left, a close-up crop, top of frame is the waist, bottom of frame is just below the feet",
+    "Lower Body - Right Profile": "side profile view, body and face pointing toward the right edge of the image, nose pointing right, a close-up crop, top of frame is the waist, bottom of frame is just below the feet",
+    "Lower Body - Back 3/4 Left": "three-quarter back view, seen mostly from behind, body angled toward the left edge of the image, a close-up crop, top of frame is the waist, bottom of frame is just below the feet",
+    "Lower Body - Back 3/4 Right": "three-quarter back view, seen mostly from behind, body angled toward the right edge of the image, a close-up crop, top of frame is the waist, bottom of frame is just below the feet",
+    "Lower Body - Back": "back view, seen from directly behind, a close-up crop, top of frame is the waist, bottom of frame is just below the feet",
     "Waist - Front": "front view, facing the camera, a close-up crop, top of frame is the chest, bottom of frame is the upper thighs, centered on the waist",
-    "Waist - Front 3/4 Left": "turned three-quarters to the left, a close-up crop, top of frame is the chest, bottom of frame is the upper thighs, centered on the waist",
-    "Waist - Front 3/4 Right": "turned three-quarters to the right, a close-up crop, top of frame is the chest, bottom of frame is the upper thighs, centered on the waist",
-    "Waist - Left Profile": "left profile, a close-up crop, top of frame is the chest, bottom of frame is the upper thighs, centered on the waist",
-    "Waist - Right Profile": "right profile, a close-up crop, top of frame is the chest, bottom of frame is the upper thighs, centered on the waist",
-    "Waist - Back 3/4 Left": "mostly turned away, seen three-quarters from the back on the left side, a close-up crop, top of frame is the chest, bottom of frame is the upper thighs, centered on the waist",
-    "Waist - Back 3/4 Right": "mostly turned away, seen three-quarters from the back on the right side, a close-up crop, top of frame is the chest, bottom of frame is the upper thighs, centered on the waist",
-    "Waist - Back": "back view, a close-up crop, top of frame is the chest, bottom of frame is the upper thighs, centered on the waist",
+    "Waist - Front 3/4 Left": "three-quarter front view, body and face angled toward the left edge of the image, a close-up crop, top of frame is the chest, bottom of frame is the upper thighs, centered on the waist",
+    "Waist - Front 3/4 Right": "three-quarter front view, body and face angled toward the right edge of the image, a close-up crop, top of frame is the chest, bottom of frame is the upper thighs, centered on the waist",
+    "Waist - Left Profile": "side profile view, body and face pointing toward the left edge of the image, nose pointing left, a close-up crop, top of frame is the chest, bottom of frame is the upper thighs, centered on the waist",
+    "Waist - Right Profile": "side profile view, body and face pointing toward the right edge of the image, nose pointing right, a close-up crop, top of frame is the chest, bottom of frame is the upper thighs, centered on the waist",
+    "Waist - Back 3/4 Left": "three-quarter back view, seen mostly from behind, body angled toward the left edge of the image, a close-up crop, top of frame is the chest, bottom of frame is the upper thighs, centered on the waist",
+    "Waist - Back 3/4 Right": "three-quarter back view, seen mostly from behind, body angled toward the right edge of the image, a close-up crop, top of frame is the chest, bottom of frame is the upper thighs, centered on the waist",
+    "Waist - Back": "back view, seen from directly behind, a close-up crop, top of frame is the chest, bottom of frame is the upper thighs, centered on the waist",
     "Head - Front": "front view, facing the camera, close framing on the head",
-    "Head - Front 3/4 Left": "turned three-quarters to the left, close framing on the head",
-    "Head - Front 3/4 Right": "turned three-quarters to the right, close framing on the head",
-    "Head - Left Profile": "left profile, close framing on the head",
-    "Head - Right Profile": "right profile, close framing on the head",
-    "Head - Back 3/4 Left": "mostly turned away, seen three-quarters from the back on the left side, close framing on the head",
-    "Head - Back 3/4 Right": "mostly turned away, seen three-quarters from the back on the right side, close framing on the head",
-    "Head - Back": "back view, close framing on the head",
+    "Head - Front 3/4 Left": "three-quarter front view, body and face angled toward the left edge of the image, close framing on the head",
+    "Head - Front 3/4 Right": "three-quarter front view, body and face angled toward the right edge of the image, close framing on the head",
+    "Head - Left Profile": "side profile view, body and face pointing toward the left edge of the image, nose pointing left, close framing on the head",
+    "Head - Right Profile": "side profile view, body and face pointing toward the right edge of the image, nose pointing right, close framing on the head",
+    "Head - Back 3/4 Left": "three-quarter back view, seen mostly from behind, body angled toward the left edge of the image, close framing on the head",
+    "Head - Back 3/4 Right": "three-quarter back view, seen mostly from behind, body angled toward the right edge of the image, close framing on the head",
+    "Head - Back": "back view, seen from directly behind, close framing on the head",
 }
 _SHOT_DESCRIPTION_OPTIONS = list(_SHOT_DESCRIPTION_PHRASES.keys())
 
@@ -875,6 +875,44 @@ _HEAD_IN_FRAME_REGIONS = {"Full Body", "Upper Body", "Head"}
 
 #: `expression` is only written when the face is actually in frame.
 _FACE_VISIBLE_ORIENTATIONS = {"Front", "Front 3/4 Left", "Front 3/4 Right"}
+
+
+def _behind_clause(p: dict, region: str, orientation: str) -> str:
+    """The extra sentence a back view needs, or "" for every other view.
+
+    The outfit descriptions are usually of the front (buttons, collar...),
+    and P-H3-Image turns the person to the camera to show them; stating
+    what the camera sees from behind keeps the back view. Only what is
+    visible is named — no front detail, not even negated. A region without
+    the head doesn't name the head or face here either: "the back of her
+    head" in a waist crop turned the body back to the camera.
+    """
+    if region not in _HEAD_IN_FRAME_REGIONS:
+        if orientation == "Back":
+            return f"The camera is directly behind {p['obj']}: we see {p['poss']} back and the back of the garments. "
+        if orientation.startswith("Back 3/4"):
+            return (f"The camera is behind {p['obj']}: we see mostly {p['poss']} back and the back of "
+                    "the garments. ")
+        return ""
+    if orientation == "Back":
+        if region == "Head":
+            return (f"The camera is directly behind {p['obj']}: only the back of {p['poss']} head and "
+                    f"{p['poss']} hair are visible, {p['poss']} face is not visible. ")
+        return (f"The camera is directly behind {p['obj']}: we see {p['poss']} back, the back of "
+                f"{p['poss']} head and hair, and the back of the garments; {p['poss']} face is not visible. ")
+    if orientation.startswith("Back 3/4"):
+        if region == "Head":
+            return (f"The camera is behind {p['obj']}: we see mostly the back and side of {p['poss']} "
+                    f"head and {p['poss']} hair, {p['poss']} face turned away from the camera. ")
+        return (f"The camera is behind {p['obj']}: we see mostly {p['poss']} back and the back of "
+                f"{p['poss']} head, {p['poss']} face turned away from the camera. ")
+    return ""
+
+
+#: Top edge of the frame of each region without the head, for the sentence
+#: that keeps the head out of a back view without naming the face.
+_REGION_TOP_EDGE = {"Lower Body": "waist", "Waist": "chest"}
+
 
 _EXPRESSION_PHRASES = {
     "neutral": "neutral",
@@ -918,13 +956,16 @@ _REGION_CATEGORIES = {
 }
 
 
-def _shot_outfit_items(pictures, tags, region: str, back_view: bool) -> list[tuple[str, str]]:
+def _shot_outfit_items(pictures, tags, region: str, back_view: bool,
+                       front_as_back: bool = False) -> list[tuple[str, str]]:
     """`(description, <Picture N>)` pairs a shot names, in picture order.
 
     A back view uses a category's `..._back` description when one exists
     (from any picture) instead of its front one; a front view never uses a
     back description. Falls back to every front description when the
-    region's filter leaves nothing to name.
+    region's filter leaves nothing to name. `front_as_back` reads a front
+    description used in a back view as "the back of ..." — a waist crop
+    from behind otherwise turned to show the front details it lists.
     """
     visible = _REGION_CATEGORIES.get(region, _REGION_CATEGORIES["Full Body"])
     with_back = {_base_category(key) for entries in pictures for key, _ in entries if key and key.endswith("_back")}
@@ -934,12 +975,13 @@ def _shot_outfit_items(pictures, tags, region: str, back_view: bool) -> list[tup
             is_back = bool(key) and key.endswith("_back")
             if not is_back:
                 front_items.append((text, tag))
+            shown = f"the back of {text}" if front_as_back and back_view and not is_back else text
             if key is None:
-                items.append((text, tag))
+                items.append((shown, tag))
             elif _base_category(key) in visible:
                 use_back = back_view and _base_category(key) in with_back
                 if is_back == use_back:
-                    items.append((text, tag))
+                    items.append((shown, tag))
     return items or front_items
 
 _DEFAULT_BACKDROP = "plain light neutral grey studio backdrop"
@@ -1045,7 +1087,8 @@ class PH3LookSheetsPrompt(io.ComfyNode):
         for shot_description, expression in parsed:
             region, _, orientation = shot_description.rpartition(" - ")
             framing = _SHOT_DESCRIPTION_PHRASES.get(shot_description, shot_description)
-            items = _shot_outfit_items(outfit_pictures, outfit_tags, region, orientation.startswith("Back"))
+            items = _shot_outfit_items(outfit_pictures, outfit_tags, region, orientation.startswith("Back"),
+                                       front_as_back=region not in _HEAD_IN_FRAME_REGIONS)
             outfit_ref = _join_tags_english(list(dict.fromkeys(tag for _, tag in items)))
             # Each item named with its own picture: P-H3-Image copies what the
             # words describe, a bare "the outfit from <Picture 2>" barely
@@ -1053,23 +1096,33 @@ class PH3LookSheetsPrompt(io.ComfyNode):
             outfit_fragment = "; ".join(f"{text} ({tag})" for text, tag in items)
             outfit_only = (f"Only the clothing and accessories come from {outfit_ref}; the hair, body, "
                            "pose and camera angle of whoever or whatever wears them there are not kept.")
+            behind = _behind_clause(p, region, orientation)
             if region in _HEAD_IN_FRAME_REGIONS:
                 shot_pose = pose
                 if orientation in _FACE_VISIBLE_ORIENTATIONS:
                     shot_pose += f", with a {_EXPRESSION_PHRASES.get(expression, expression)} expression"
+                # A back view doesn't name the face or carry the person
+                # description (eyes...): either turns the body to the camera.
+                if behind:
+                    keep = "exactly the same hair, hairstyle, skin and body proportions"
+                else:
+                    keep = f"exactly the same face, hair, hairstyle, skin and body proportions{person_clause}"
                 prompts.append(
-                    f"Edit <Picture 1>. Keep the {p['noun']} from {person_ref} with exactly the same "
-                    f"face, hair, hairstyle, skin and body proportions{person_clause}. "
+                    f"Edit <Picture 1>. Keep the {p['noun']} from {person_ref} with {keep}. "
                     f"Dress {p['obj']} in the outfit and accessories from {outfit_ref}: {outfit_fragment}. "
                     f"{outfit_only} "
                     f"Camera: {framing}, {p['poss']} whole head and the top of {p['poss']} hair fully "
-                    f"inside the frame. {shot_pose}. {ending}"
+                    f"inside the frame. {behind}{shot_pose}. {ending}"
                 )
             else:
-                # Framing first, so it isn't outweighed by the outfit text.
+                # Framing first, so it isn't outweighed by the outfit text. A
+                # back view keeps the head out without naming the face.
+                if behind:
+                    head_out = f"Everything above the {_REGION_TOP_EDGE.get(region, 'waist')} is outside the frame. "
+                else:
+                    head_out = "The head and face are outside the frame, cut off above the top edge of the image. "
                 prompts.append(
-                    f"Edit <Picture 1>. Camera: {framing}. The head and face are outside the frame, "
-                    "cut off above the top edge of the image. "
+                    f"Edit <Picture 1>. Camera: {framing}. {head_out}{behind}"
                     f"Show the {p['noun']} from {person_ref} with the same skin tone and body "
                     f"proportions, dressed in the outfit and accessories from {outfit_ref}: "
                     f"{outfit_fragment}. {outfit_only} {pose}. {ending}"
